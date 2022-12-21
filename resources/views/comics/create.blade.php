@@ -9,7 +9,8 @@
             Inserisci i dati
         </h2>
 
-        <form action="" method="POST">
+        <br>
+        <form action="{{ route('comics.store') }}" method="POST">
             @csrf
 
             <label for="title">Titolo</label>
@@ -37,8 +38,17 @@
 
             <br>
 
+            <label for="description">Descrizione</label>
+            <textarea name="description" id="description" rows="10"></textarea>
+
+            <br>
+
             <label for="thumb">Thumbnail</label>
             <textarea name="thumb" id="thumb" rows="10"></textarea>
+
+            <br>
+
+            <button type="submit" class="btn btn-success">Invia</button>
         </form>
     </div>
 @endsection
