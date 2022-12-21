@@ -6,6 +6,8 @@
     <div class="container">
         <h1>Comics - Admin setion</h1>
 
+        <a href="{{ route('comics.create') }}" class="btn btn-success">+ ADD</a>
+
         <table class="table table-striped">
             <thead>
                 <tr>
