@@ -4,7 +4,6 @@
 
 @section('content')
     <div class="container">
-
         <h2 class="text-center text-primary my-2">
             Inserisci i dati
         </h2>

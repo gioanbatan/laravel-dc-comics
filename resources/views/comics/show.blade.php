@@ -41,6 +41,9 @@
                     {{ $comic->description }}
                 </p>
             </dd>
+
+            <dt>Prezzo:</dt>
+            <dd class="text-info">{{ $comic->price }}</dd>
         </dl>
 
         <a href="{{ route('comics.index') }}">
