@@ -4,9 +4,14 @@
 
 @section('content')
     <div class="container">
-        <h1>Comics - Admin setion</h1>
-
-        <a href="{{ route('comics.create') }}" class="btn btn-success">+ ADD</a>
+        <h1>Comics - Admin section</h1>
+        {{-- <div class="d-block text-end"> --}}
+        <div class="action-buttons d-flex flex-row-reverse">
+            <a href="{{ route('comics.create') }}" class="btn btn-success">
+                <i class="fa-solid fa-circle-plus"></i> Nuovo
+            </a>
+        </div>
+        {{-- </div> --}}
 
         <table class="table table-striped">
             <thead>
@@ -15,6 +20,7 @@
                     <th scope="col">Serie</th>
                     <th scope="col">Tipo</th>
                     <th scope="col">Prezzo</th>
+                    <th scope="col">Azioni</th>
                 </tr>
             </thead>
             <tbody>
@@ -25,21 +31,19 @@
                         <td>{{ $comic->type }}</td>
                         <td>{{ $comic->price }}</td>
                         <td>
-                            <a href="{{ route('comics.show', $comic->id) }}">
-                                Show
+                            <a class="btn" href="{{ route('comics.show', $comic->id) }}">
+                                <i class="fa-solid fa-circle-info text-primary"></i>
                             </a>
-                        </td>
-                        <td>
-                            <a href="{{ route('comics.edit', $comic->id) }}">
-                                Modifica
+
+                            <a class="btn" href="{{ route('comics.edit', $comic->id) }}">
+                                <i class="fa-solid fa-pen-to-square text-primary"></i>
                             </a>
-                        </td>
-                        <td>
-                            <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
+
+                            <form class="d-inline" action="{{ route('comics.destroy', $comic->id) }}" method="POST">
                                 @method('DELETE')
                                 @csrf
-                                <button type="submit" onclick="return wantDelete()">
-                                    Cancella
+                                <button class="btn" type="submit" onclick="return wantDelete()">
+                                    <i class="fa-solid fa-trash-can text-danger"></i>
                                 </button>
                             </form>
                         </td>
