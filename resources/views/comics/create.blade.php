@@ -8,6 +8,15 @@
             Inserisci i dati
         </h2>
 
+        @if ($errors->any())
+            <br>
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        @endif
+
         <br>
         <form action="{{ route('comics.store') }}" method="POST">
             @csrf
