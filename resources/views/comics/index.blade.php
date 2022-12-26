@@ -2,16 +2,15 @@
 
 @section('title', 'Comics - Admin')
 
+@section('actions')
+    <a href="{{ route('comics.create') }}" class="btn btn-success">
+        <i class="fa-solid fa-circle-plus"></i> Nuovo
+    </a>
+@endsection
+
 @section('content')
     <div class="container">
         <h1>Comics - Admin section</h1>
-        {{-- <div class="d-block text-end"> --}}
-        <div class="action-buttons d-flex flex-row-reverse">
-            <a href="{{ route('comics.create') }}" class="btn btn-success">
-                <i class="fa-solid fa-circle-plus"></i> Nuovo
-            </a>
-        </div>
-        {{-- </div> --}}
 
         <table class="table table-striped">
             <thead>

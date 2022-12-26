@@ -13,7 +13,8 @@
 </head>
 
 <body>
-    <main>
+    @include('partials.header')
+    <main class="header-margin">
         @yield('content')
     </main>
 </body>
