@@ -61,7 +61,7 @@
             <br>
 
             <button type="submit" class="btn btn-success">Invia</button>
-            <button type="reset" class="btn btn-secondary">Svuota campi</button>
+            {{-- <button type="reset" class="btn btn-secondary">Svuota campi</button> --}}
         </form>
     </div>
 @endsection

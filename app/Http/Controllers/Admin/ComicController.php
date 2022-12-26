@@ -108,8 +108,10 @@ class ComicController extends Controller
             'title' => 'required|min:5|max:255',
             'price' => 'required',
             'series' => 'required|min:5|max:255',
-            'type' => 'required|in:comic book, graphic novel]',
-            'description' => 'required'
+            'description' => 'required',
+            'thumb' => 'required',
+            'sale_date' => 'required|date',
+            'type' => 'required|in:comic book, graphic novel'
         ], [
             'title.required' => 'Il titolo è un campo obbligatorio',
             'title.min' => 'Il titolo deve avere una lunghezza minima di 5 caratteri',
@@ -120,7 +122,10 @@ class ComicController extends Controller
             'series.max' => 'La serie supera la lunghezza massima di caratteri (255)',
             'type.required' => 'Il tipo è un campo obbligatorio',
             'type.in' => 'Il tipo deve essere "comic book" o "graphic novel"',
-            'description.required' => 'La descrizione è un campo obbligatorio'
+            'description.required' => 'La descrizione è un campo obbligatorio',
+            'thumb.required' => 'La thumbnail è un campo obbligatorio',
+            'sale_date.required' => 'La data di messa in vendita un campo obbligatorio',
+            'sale_date.date' => 'La data deve essere nel formato YYYY-MM-DD'
         ])->validate();
 
         return $validatorResult;
