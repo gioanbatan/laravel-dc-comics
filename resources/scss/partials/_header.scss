@@ -4,5 +4,9 @@ header {
     left: 0;
     width: 100%;
     height: $header-height;
-    background-color: $col_light_blue;
+    background-color: $col_bg_header;
+
+    img {
+        height: calc($header-height - ($header-height / 100 * 50));
+    }
 }
