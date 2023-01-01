@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Comics')
+@section('title', '')
 
 @section('content')
     <a href="{{ route('comics.index') }}" class="btn btn-primary">

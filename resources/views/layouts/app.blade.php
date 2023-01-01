@@ -9,7 +9,9 @@
     {{-- Style --}}
     @vite('resources/js/app.js')
 
-    <title>@yield('title')</title>
+    <title>DC-Comics
+        @yield ('title')
+    </title>
 </head>
 
 <body>

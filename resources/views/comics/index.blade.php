@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Comics - Admin')
+@section('title', 'Admin')
 
 @section('actions')
     <a href="{{ route('comics.create') }}" class="btn btn-success">
